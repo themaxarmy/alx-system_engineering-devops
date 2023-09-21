@@ -17,8 +17,8 @@ upstream app_server_djangoapp {
 server localhost:6000 fail_timeout=0;
 }
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
+	listen 80 3.84.161.219;
+	listen [::]:80 3.84.161.219;
 
 	# SSL configuration
 	#
