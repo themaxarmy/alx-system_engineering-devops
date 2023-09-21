@@ -17,8 +17,8 @@ upstream app_server_djangoapp {
 server localhost:6000 fail_timeout=0;
 }
 server {
-	listen 80 3.84.161.219;
-	listen [::]:80 3.84.161.219;
+	listen 80 default_server;
+	listen [::]:80 default_server;
 
 	# SSL configuration
 	#
@@ -42,7 +42,7 @@ server {
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
 
-	server_name 3.84.161.219;
+	server_name 3.84.161.219	;
 
 	location / {
 		# First attempt to serve request as file, then
@@ -52,7 +52,7 @@ server {
 
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 	location /airbnb-onepage/ {
-                proxy_pass http://0.0.0.0:/airbnb-onepage;
+                proxy_pass http://0.0.0.0:5000/airbnb-onepage;
         }
 
 	#
