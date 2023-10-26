@@ -52,7 +52,7 @@ server {
 
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 	location /airbnb-onepage/ {
-                proxy_pass http://0.0.0.0:5000/airbnb-onepage;
+                proxy_pass http://0.0.0.0:/airbnb-onepage;
         }
 
 	#
